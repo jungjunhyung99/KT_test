@@ -338,7 +338,7 @@ function Hamburger_last() {
                                 {selectId && (
                                     <>
                                     <Overlay onClick={overlayClicked}></Overlay>
-                                    <QuantityBox key={`${selectId}`} layoutId={`${selectId}`} style={{color:"black"}}>
+                                    <QuantityBox  layoutId={`${selectId}`} style={{color:"black"}}>
                                         <h2>더하세요</h2>
                                         <CountBox>
                                         <QuantityButton onClick={minusClicked}>-</QuantityButton>

@@ -10,7 +10,6 @@ import HardChoice from './routes/HardChoice';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
 import { createGlobalStyle } from 'styled-components';
-import Explain from './routes/Explain';
 import { RecoilRoot } from 'recoil';
 import Game from './routes/Game';
 import Explain2 from './routes/Explain2';
@@ -127,7 +126,7 @@ function App() {
           <Route path="/Menu" element={<Menu/>}>
           <Route path="/Menu/intro/:id" element={<Intro1/>}/>
           <Route path="/Menu/home/introduce" element={<Introduce/>}/>
-            <Route path="/Menu/explain2" element={<Explain/>}/>
+           
             <Route path="/Menu/explain" element={<Explain2/>}>
             </Route>
             <Route path="/Menu/gamechoice" element={<Game/>}>

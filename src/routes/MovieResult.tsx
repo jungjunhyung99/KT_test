@@ -122,8 +122,8 @@ function MovieResult() {
                   <Box bgPhoto={makeImagePath(movies?.results[answerRecoil.num].poster_path || "")}></Box>
                   <div>
                     {result.title != answerRecoil.title ? 
-                      <div><span style={{fontSize:"1em"}}><p style={{fontSize:"1.3em",fontWeight:"800"}}>{answerRecoil.title}</p>을 선택 해주세요!</span></div>
-                      : <div><span style={{fontSize:"0,7em"}}><p style={{fontSize:"1.3em",fontWeight:"800",color:"#2BB7B3"}}>영화제목 선택 성공!</p></span></div>}
+                      <div><span style={{fontSize:"1.2em",color:"#f96363"}}>{answerRecoil.title}을 선택 해주세요!</span></div>
+                      : <div><span style={{fontSize:"1.2em",color:"#2BB7B3"}}>영화제목 선택 성공!</span></div>}
                     </div>
                   </SubBox>
                 
@@ -131,8 +131,8 @@ function MovieResult() {
                     <TimeBox>{answerRecoil.time}</TimeBox>
                     <div style={{display:"flex",flexDirection:"column"}}>
                       {result.time != answerRecoil.time ? 
-                      <div><span style={{fontSize:"0.7em"}}><p style={{fontSize: "2em",fontWeight:"800"}}>를 선택 안하셨네요!</p></span></div>
-                      : <div><span style={{fontSize:"0.7em"}}><p style={{fontSize:"2em",fontWeight:"800",color:"#2BB7B3"}}>시간 선택 성공!</p></span></div>}
+                      <div><span style={{fontSize:"1.2em",color:"#f96363"}}>를 선택 안하셨네요!</span></div>
+                      : <div><span style={{fontSize:"1.2em",color:"#2BB7B3"}}>시간 선택 성공!</span></div>}
                     </div>
                 </SubBox>
                 <hr/>
@@ -140,8 +140,8 @@ function MovieResult() {
                 <SubBox>
                     <Item>B11</Item>
                     <div style={{display:"flex",flexDirection:"column"}}>
-                    {result.seat !== answerRecoil.seat ? <div><span style={{fontSize:"1.5em",alignItems:"center"}}><p style={{fontSize:"0.8em",fontWeight:"800"}}><tr/> x {answerRecoil.seat} 개의 좌석을 선택 안하셨네요!</p></span></div>
-                    : <div><span style={{fontSize:"0.7em",bottom:"0"}}><p style={{fontSize:"2em",fontWeight:"800",color:"#2BB7B3"}}>좌석 선택 성공!</p></span></div>}
+                    {result.seat !== answerRecoil.seat ? <div><span style={{fontSize:"1.2em",alignItems:"center",color:"#f96363"}}><tr/> x {answerRecoil.seat} 개의 좌석을 선택 안하셨네요!</span></div>
+                    : <div><span style={{fontSize:"1.2em",bottom:"0",color:"#2BB7B3"}}>좌석 선택 성공!</span></div>}
                     </div>
                   </SubBox>
                 </div>

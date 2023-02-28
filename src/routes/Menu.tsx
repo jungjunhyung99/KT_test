@@ -109,11 +109,11 @@ const NavBar = styled.nav`
   }
 `;
 
-const Body = styled(motion.div)`
+const Body = styled(motion.div)<{isactive:boolean}>`
     width:100vw;
     padding-top: 50px;
+    min-height: ${(props)=>props.isactive ? "80vh" : "auto"};
     display: flex;
-    min-height: 80vh;
     justify-content: center;
     flex-direction: row;
     text-align: center;
@@ -280,7 +280,7 @@ function Menu() {
     const baseMatch = useMatch("/Menu/intro");
     const kioskMatch = useMatch("/Menu/home/introduce");
     const gameMatch = useMatch("/Menu/gamechoice");
-    const testMatch = useMatch("/Menu/home/hard");
+    const testMatch = useMatch("/Menu/home/hard/*");
     const [display, setDisplay] = useState<boolean[]>([false,false,false]);
     const outMouseDisplay = (index:number) => {
         let newDisplay = [...display];
@@ -407,7 +407,7 @@ function Menu() {
                 </NavWrapper>
             </NavBar> */}
         <div style={{display:"flex",flexDirection:"column"}}>
-        <Body>
+        <Body isactive={testMatch!==null}>
             <Outlet/>
         </Body>
         <Footer/>

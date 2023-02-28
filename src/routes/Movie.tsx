@@ -61,6 +61,7 @@ function Movie() {
               `https://api.themoviedb.org/3/movie/now_playing?api_key=1e1dd98e7bbdb858a49359dbec86444f`
           )
         ).json();
+        console.log(json);
         setMovie(json);
         const number :number = Math.floor(Math.random()*3);
         setName(json?.results[number].title);        

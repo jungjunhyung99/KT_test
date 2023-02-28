@@ -313,13 +313,13 @@ function Seat(){
             <div style={{display:"block", margin:"0 auto", border:"3px solid white",width:"70%", marginTop:"20px"}}><h3>screen</h3></div>
             <div style={{display:"flex",height:"80%",justifyContent:"center"}}>
             <Grid>
-                {seat1.map((num,index) => <Item onClick={()=>seatClick(index,1)} isActive={num.clicked}>{num.seat_num}</Item>)}
+                {seat1.map((num,index) => <Item key={index+10} onClick={()=>seatClick(index,1)} isActive={num.clicked}>{num.seat_num}</Item>)}
             </Grid>
             <LargeGrid>
-                {seat2.map((num,index) => <Item onClick={()=>seatClick(index,2)} isActive={num.clicked}>{num.seat_num}</Item>)}
+                {seat2.map((num,index) => <Item key={index+30} onClick={()=>seatClick(index,2)} isActive={num.clicked}>{num.seat_num}</Item>)}
             </LargeGrid>
             <Grid>
-                {seat3.map((num,index) => <Item onClick={()=>seatClick(index,3)} isActive={num.clicked}>{num.seat_num}</Item>)}
+                {seat3.map((num,index) => <Item key={index+50} onClick={()=>seatClick(index,3)} isActive={num.clicked}>{num.seat_num}</Item>)}
             </Grid>
             </div>
             {num === 0 ? <Button onClick={() => nextPress(person)} isActive={num === 0}>예약하기</Button> : <Button isActive={false} >좌석을 선택해주세요</Button> }

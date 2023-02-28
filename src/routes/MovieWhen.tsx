@@ -145,8 +145,8 @@ function MovieWhen() {
         exit={{opacity: 0}}>
           <div style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
             <Banner bgPhoto={makeImagePath(movies?.results[4].backdrop_path || "")}/>
-            {movies?.results.slice(0,3).map((movie) => (
-               <div style={{display:"flex",justifyContent:"center",alignContent:"center",height:"9rem",marginBottom:"3rem"}}>
+            {movies?.results.slice(0,3).map((movie,index) => (
+               <div key={index} style={{display:"flex",justifyContent:"center",alignContent:"center",height:"9rem",marginBottom:"3rem"}}>
               <Box bgPhoto={makeImagePath(movie?.poster_path)}>
               </Box>
               <div style={{display:"flex", flexDirection:"column"}}>

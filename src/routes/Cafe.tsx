@@ -51,8 +51,8 @@ const Info = styled(motion.div)`
   }
 `;
 
-const Box = styled(motion.div)<{bgPhoto: string}>`
-    background-image: url(${(props)=>props.bgPhoto});
+const Box = styled(motion.div)<{bgphoto: string}>`
+    background-image: url(${(props)=>props.bgphoto});
     background-size: cover;
     height: 60%;
     width: 60%;
@@ -63,8 +63,8 @@ const Box = styled(motion.div)<{bgPhoto: string}>`
     border: 2px solid;
 `;
 
-const SmallBox = styled(motion.div)<{bgPhoto: string}>`
-    background-image: url(${(props)=>props.bgPhoto});
+const SmallBox = styled(motion.div)<{bgphoto: string}>`
+    background-image: url(${(props)=>props.bgphoto});
     background-size: cover;
     height: 70px;
     width: 70px;
@@ -402,7 +402,7 @@ function Cafe () {
                 {menu.map((obj) => 
                 <MenuContainer>
                 <Box 
-                bgPhoto={obj.img} 
+                bgphoto={obj.img} 
                 key={obj.id}
                 variants={boxVariant} initial whileHover="hover" 
                 transition={{type:"tween"}}
@@ -437,7 +437,7 @@ function Cafe () {
                                     }}}
                                     exit={{opacity: 0}}>
                                     <SmallBox
-                                    bgPhoto={cho.img}
+                                    bgphoto={cho.img}
                                     key={cho.id}
                                     variants={smboxVariant} initial animate="exit"
                                     transition={{type:"tween"}}

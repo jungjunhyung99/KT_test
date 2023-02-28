@@ -103,7 +103,6 @@ function Payment() {
     const menu = useRecoilValue<IAtomCafe[]>(cafeObj);
     const answer = useRecoilValue<ICafe[]>(CafeAnswer);
     const [message, setMessage] = useState<string[]>([]);
-    console.log(answer);
   const print = (obj: IAtomCafe[], num: number) => {
     //if(answer[i].name == obj[j].name && answer[i].quantity == obj[j].quantity){ 
     for(let i = 0; i < obj.length ; i++){
@@ -200,7 +199,7 @@ function Payment() {
                     transition={{type:"tween"}}
                     ></Button>
                     <div style={{fontWeight:"800", marginTop:"1em"}}>
-                      다시하기
+                      나가기
                     </div>
                     </div>
                   </div>
